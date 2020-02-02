@@ -28,7 +28,7 @@ app.use(session({
   saveUninitialized:true
 }))
 
-mongoose.connect('mongodb://127.0.0.1/007nodejs');
+mongoose.connect('mongodb+srv://phoopwintaung:phoopwintaung123@cluster0-ucl7o.mongodb.net/test?retryWrites=true&w=majority');
 var db = mongoose.connection;
 db.on('error',console.error.bind(console,'MongoDB connection error:'));
 
