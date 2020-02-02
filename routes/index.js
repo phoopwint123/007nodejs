@@ -18,7 +18,7 @@ schema
 /* GET home page. */
 router.get('/', function(req, res, next) {
   console.log('call');
-  res.render('index', { title: 'Express Framework' ,user:(req.session.user == undefined)? {name:'unknown',email:'unknown'}:req.session.user});
+  res.render('index', { title: 'Express Framework'});
 });
 
 router.get('/home',function (req,res,next) {
