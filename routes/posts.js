@@ -23,7 +23,7 @@ router.post('/postadd',function (req,res,next) {
   post.save(function (err,rtn) {
     if(err) throw err;
     console.log(rtn);
-    res.redirect('/posts');
+    res.redirect('/');
   })
 })
 
