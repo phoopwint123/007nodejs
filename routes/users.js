@@ -38,7 +38,11 @@ router.get('/userdetail/:id',function (req,res,next) {
   User.findById(req.params.id,function (err,rtn) {
     if(err) throw err;
     console.log(rtn);
-    res.render('user/userdetail',{user:rtn});
+    Post.find({author:req.params.id},function (err2,rtn2) {
+      if(err2) throw err2;
+      console.log(err2);
+      res.render('user/user-detail',{user:rtn,post:rtn2});
+    })
   })
 })
 
