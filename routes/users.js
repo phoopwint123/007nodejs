@@ -41,7 +41,7 @@ router.get('/userdetail/:id',function (req,res,next) {
     Post.find({author:req.params.id},function (err2,rtn2) {
       if(err2) throw err2;
       console.log(err2);
-      res.render('user/user-detail',{user:rtn,post:rtn2});
+      res.render('user/userdetail',{user:rtn,post:rtn2});
     })
   })
 })
